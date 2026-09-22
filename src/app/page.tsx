@@ -76,9 +76,9 @@ export default function HomePage() {
             How I help teams
           </h2>
           <p className="mt-4 max-w-2xl text-base leading-relaxed text-zinc-400">
-            From metric definitions and SQL models to experiment readouts and
-            ops dashboards—analysis that changes what a team does next week,
-            not just what they report.
+            From multi-market data workflows and curriculum design to agent
+            automation and fundamental research—shipping systems that change
+            what I (and clients) do next, not just what we report.
           </p>
           <ul className="mt-8 flex flex-wrap gap-2">
             {highlights.map((skill) => (

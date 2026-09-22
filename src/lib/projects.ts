@@ -1,7 +1,6 @@
 /**
- * INTERNAL: All four case studies are FICTIONAL / generic portfolio demos.
- * Do not present as employment at named real brands. Safe for recruiter review
- * when framed as illustrative project work.
+ * REAL_PERSONAL — Selected real projects: personal products, research lab work,
+ * and freelance delivery. Honest process metrics; no fictional employer ROI.
  */
 
 export type ProjectMetric = {
@@ -25,99 +24,123 @@ export type Project = {
 
 export const projects: Project[] = [
   {
-    slug: "ecommerce-retention",
-    title: "E-commerce retention & win-back",
-    domain: "E-commerce",
-    year: "2024",
+    slug: "alpharadar",
+    title: "AlphaRadar — AI trading assistant",
+    domain: "Markets · Product",
+    year: "2025–2026",
     summary:
-      "Cohort retention model and a gated win-back test that paid back without blanket discounts.",
+      "Multi-market AI trading assistant (IDX, global equities, crypto) with a paper-trading desk and daily briefs delivered via Hermes and Telegram.",
     outcome:
-      "Raised 90-day repeat purchase rate by clarifying which cohorts were leaking—and which win-back offers actually paid back.",
-    tools: ["SQL", "Python", "dbt", "Looker"],
+      "Shipped a personal decision system focused on signal hygiene, journal/PnL discipline, and multi-market data workflows—not live profit claims.",
+    tools: ["TypeScript", "Python", "Telegram bots", "Data pipelines", "Hermes"],
     metrics: [
-      { label: "90-day retention", value: "+8%" },
-      { label: "Win-back ROI", value: "2.4×" },
+      { label: "Markets covered", value: "3" },
+      { label: "Brief cadence", value: "Daily" },
     ],
     problem:
-      "A multi-category online retailer saw first-order volume grow while 90-day repeat purchase stalled. Marketing still spent on broad discount blasts; product and CRM could not agree which cohorts were worth saving. Leadership needed a shared definition of retention and a testable playbook—not another vanity dashboard.",
+      "Retail and self-directed trading workflows drown in noise: fragmented market data across IDX, global equities, and crypto; ad-hoc notes instead of a trade journal; and no shared ritual for risk limits or signal review. I needed a system that forces process discipline before any live capital—signal hygiene, paper trading, and a daily brief I would actually open.",
     approach:
-      "I rebuilt retention in dbt from order and session events (first purchase date, order rank, category mix). In Looker I shipped cohort grids by acquisition channel and first category, then diagnosed drop-offs between order 1→2 and 2→3. With CRM I designed a gated win-back experiment (timing × offer depth) with guardrails on discount margin and unsubscribe rate. Weekly reviews translated the charts into one decision: who gets an offer, who gets content-only, who is left alone.",
+      "I designed AlphaRadar as a multi-market assistant with a paper-trading desk at the center. TypeScript and Python pipelines normalize market inputs; Hermes shapes daily briefs; Telegram bots deliver them where I already check messages. The product emphasis is journal and PnL tracking, explicit risk limits, and repeatable brief cadence—so analytics serve decision hygiene rather than hindsight storytelling.",
     impact: [
-      { label: "90-day retention", value: "+8%" },
-      { label: "Win-back campaign ROI", value: "2.4×" },
-      { label: "Discount cost per recovered order", value: "−31%" },
+      { label: "Markets in one workflow", value: "IDX · Global · Crypto" },
+      { label: "Daily brief delivery", value: "Hermes + Telegram" },
+      { label: "Trading mode", value: "Paper desk first" },
     ],
   },
   {
-    slug: "fintech-credit-ops",
-    title: "Credit ops queue & SLA visibility",
-    domain: "Fintech",
-    year: "2023",
+    slug: "kuanta",
+    title: "Kuanta — quant finance for beginners",
+    domain: "EdTech · Product",
+    year: "2025–2026",
     summary:
-      "One prioritized overdue queue for collectors—replacing spreadsheet handoffs and weekly surprise SLA breaches.",
+      "Public webapp that teaches quantitative finance from math-zero for Indonesian learners—curriculum structure and product scoping over vanity MAU.",
     outcome:
-      "Cut average days-past-due on the collection queue by giving ops a single prioritized view instead of spreadsheet handoffs.",
-    tools: ["SQL", "dbt", "Tableau", "Excel"],
+      "Shipped a Next.js curriculum product that sequences math foundations into market-facing quant concepts for Indonesian learners.",
+    tools: ["Next.js", "TypeScript", "Pedagogy design", "Curriculum scoping"],
     metrics: [
-      { label: "Avg days past due", value: "−22%" },
-      { label: "SLA breach rate", value: "−35%" },
+      { label: "Curriculum path", value: "Math → Quant" },
+      { label: "Stack shipped", value: "Next.js" },
     ],
     problem:
-      "A consumer lending ops team tracked overdue accounts across email exports, a core banking extract, and three team spreadsheets. Supervisors could not see which cases breached SLA until end of week. Collectors cherry-picked easy accounts; high-balance risk sat untouched. Finance and ops argued over whose numbers were “right.”",
+      "Most quant-finance material assumes university math and English-first sources. Indonesian learners who want capital-markets literacy often bounce between fragmented tutorials with no coherent sequence from arithmetic and probability into portfolios, risk, and market microstructure. The gap was product and pedagogy—not another blog post.",
     approach:
-      "I modeled a daily overdue snapshot in dbt (balance, days past due, product, collector assignment, last contact). In Tableau I built a queue board with SLA clocks, aging buckets, and capacity vs backlog. Threshold alerts flagged accounts idle >N days or approaching regulatory touch limits. I ran a two-week shadow period against the old spreadsheets to reconcile definitions, then trained leads on a 15-minute stand-up ritual using the same board.",
+      "I scoped Kuanta as a public Next.js/TypeScript webapp with an explicit curriculum spine: start at math-zero, progress into quantitative finance concepts with Indonesian learners in mind. Work covered module sequencing, learning-analytics hooks for future iteration, and ruthless product scoping so the first ship taught a path—not every topic at once.",
     impact: [
-      { label: "Average days past due", value: "−22%" },
-      { label: "Accounts past SLA", value: "−35%" },
-      { label: "Hours/week on manual reconciles", value: "−6 hrs" },
+      { label: "Audience focus", value: "ID learners" },
+      { label: "Entry level", value: "Math-zero" },
+      { label: "Delivery", value: "Public webapp" },
     ],
   },
   {
-    slug: "marketplace-pricing-test",
-    title: "Marketplace promo depth experiment",
-    domain: "Marketplace",
-    year: "2023",
+    slug: "idx-agentic-research",
+    title: "IDX agentic research workflow",
+    domain: "Research · Agents",
+    year: "2025–2026",
     summary:
-      "Promo-depth A/B that lifted GMV while holding contribution margin flat—and killed a deeper cut that looked good on top-line alone.",
+      "Agent-assisted pipeline for scanning IDX filings and IR materials into structured research notes—speed with provenance, not hallucinated theses.",
     outcome:
-      "Found a promo depth that lifted GMV without eroding contribution margin—then stopped a deeper discount that looked good on top-line alone.",
-    tools: ["Python", "SQL", "Excel", "A/B testing"],
+      "Built a repeatable agentic research loop: source → extract → structured note, with human review before any investment judgment.",
+    tools: ["TypeScript", "AI agents", "APIs", "Notion", "IDX / IR sources"],
     metrics: [
-      { label: "GMV", value: "+4.2%" },
-      { label: "Contribution margin", value: "held flat" },
+      { label: "Loop", value: "Source → Note" },
+      { label: "Review gate", value: "Human-in-loop" },
     ],
     problem:
-      "Category managers on a two-sided marketplace kept deepening flash promos because GMV moved. Finance warned that contribution margin was slipping, but nobody had a clean experiment isolating promo depth from seasonality and inventory effects. The ask: prove which discount band grew profitable demand.",
+      "IDX research is filing-heavy: announcements, financials, and IR packs land faster than a solo analyst can normalize. Generic chatbots invent numbers; manual copy-paste into Notion does not scale. I needed an agentic workflow that accelerates extraction while keeping provenance and a hard human review gate.",
     approach:
-      "I designed a stratified A/B test on selected SKU clusters (control vs −10% vs −20% promo depth), with CUPED-style covariates from prior period GMV and stockouts as a guardrail. Analysis in Python covered uplift, confidence intervals, and heterogeneous effects by price tier. I packaged a one-pager for category and finance: recommended band, kill criteria, and a simple Excel simulator for future promo calendars.",
+      "I designed an IDX-focused agent loop in TypeScript: pull or paste primary materials, extract key fields into structured Notion snapshots, and flag gaps instead of filling them with model guesses. The metric of success is research throughput and note consistency—not predicted alpha. Agents draft; I decide.",
     impact: [
-      { label: "GMV (winning variant)", value: "+4.2%" },
-      { label: "Contribution margin", value: "0 pp change" },
-      { label: "Deep-discount variant vs control", value: "−1.1 pp margin" },
+      { label: "Output shape", value: "Structured notes" },
+      { label: "Provenance", value: "Primary filings" },
+      { label: "Judgment", value: "Human final" },
     ],
   },
   {
-    slug: "ops-fulfillment-sla",
-    title: "Fulfillment late-delivery root cause",
-    domain: "Operations",
-    year: "2022",
+    slug: "bmri-csa-lab",
+    title: "CSA lab — BMRI fundamental analysis",
+    domain: "Research · Learning",
+    year: "2025–2026",
     summary:
-      "Stage-level late-delivery attribution so hubs fixed pick/pack delays instead of arguing with carriers.",
+      "Self-directed CSA Block 2 fundamental analysis using Bank Mandiri (BMRI) as the lab issuer—official filings turned into structured Notion snapshots.",
     outcome:
-      "Reduced late deliveries by pinning delays to specific warehouse steps—and giving ops a board that matched how they actually work a shift.",
-    tools: ["SQL", "dbt", "Power BI", "Python"],
+      "Built reusable bank-statement templates focused on NII, NIM, NPL, and related ratios from IR, OJK, and IDX sources.",
+    tools: ["Excel", "Notion", "Financial statement analysis", "SQL (optional)"],
     metrics: [
-      { label: "Late delivery rate", value: "−18%" },
-      { label: "Ops fire-drill escalations", value: "−40%" },
+      { label: "Lab issuer", value: "BMRI" },
+      { label: "Source types", value: "IR · OJK · IDX" },
     ],
     problem:
-      "A regional fulfillment network missed on-time delivery targets for three consecutive months. Leadership saw a single “late %” number; warehouse managers blamed carriers; carriers blamed pick delays. There was no shared decomposition of where minutes were lost between order release and handoff.",
+      "CSA Block 2 fundamental analysis demands reading primary filings—not secondary summaries. Bank statements differ from industrial issuers: net interest income, NIM, NPL, and funding mix matter more than generic P/E storytelling. I needed a repeatable lab workflow that turns official IR, OJK, and IDX documents into structured snapshots I can revisit and compare.",
     approach:
-      "I built an event timeline model in dbt (release → pick → pack → dock → carrier scan) and attributed lateness to the first breached stage. Power BI showed hub-level heatmaps, stage SLA breach rates, and daypart patterns. A short Python notebook estimated impact of fixing the top two stages vs hiring more outbound capacity. Ops adopted a daily “top late stages” review; I documented metric definitions so finance and ops stopped debating the denominator.",
+      "I treated Bank Mandiri (BMRI) as the lab issuer for self-directed CSA work. Filings were read into Excel and Notion templates covering balance sheet and P&L lines specific to banks—NII, NIM, NPL, and related ratios—so each new period updates the same structure. Optional SQL sketches explore how the same snapshots could scale to multi-issuer screens later.",
     impact: [
-      { label: "Late delivery rate", value: "−18%" },
-      { label: "Escalations to leadership", value: "−40%" },
-      { label: "Time to identify root stage", value: "same-day" },
+      { label: "Templates", value: "BS + P&L bank" },
+      { label: "Ratio focus", value: "NII · NIM · NPL" },
+      { label: "Framing", value: "Learning / lab" },
+    ],
+  },
+  {
+    slug: "upwork-ai-agents",
+    title: "Upwork Lane — AI agents & automation",
+    domain: "Freelance · Automation",
+    year: "2025–2026",
+    summary:
+      "Freelance niche in TypeScript AI agents and automation, hard-capped under 10 hours/week while building toward an investment-company goal.",
+    outcome:
+      "Practiced scoped delivery and reliability under a strict weekly hour budget—clients get working automations, calendar stays protected for product and markets work.",
+    tools: ["TypeScript", "n8n", "AI agents", "APIs"],
+    metrics: [
+      { label: "Weekly cap", value: "<10h" },
+      { label: "Focus", value: "Agents · APIs" },
+    ],
+    problem:
+      "Freelance income can expand to fill every evening. I needed a lane that compounds skills I already use as a builder—TypeScript agents, n8n workflows, API glue—while enforcing a hard weekly cap so AlphaRadar, Kuanta, and capital-markets study stay first. The constraint is the product: scope, reliability, and delivery without invented revenue theater.",
+    approach:
+      "I positioned an Upwork niche around AI agents and automation in TypeScript, with n8n and external APIs as the delivery stack. Each engagement gets a written scope, explicit success checks, and a calendar hard-stop under 10 hours/week. Reliability beats feature sprawl: prefer smaller automations that run unattended over ambitious agents that need constant babysitting.",
+    impact: [
+      { label: "Hour discipline", value: "<10h / week" },
+      { label: "Delivery style", value: "Scoped · reliable" },
+      { label: "Toward", value: "Investment co. path" },
     ],
   },
 ];

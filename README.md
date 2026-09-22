@@ -1,28 +1,31 @@
 # Rizal Alfiansyah — Portfolio
 
-Personal portfolio site for **Rizal Alfiansyah**, a data analyst (~4 years experience) based in Jakarta. English-only copy covering selected analytics case studies, skills, about, and contact.
+Personal portfolio for **Rizal Alfiansyah**, a data analyst building AI/quant systems for markets (Jakarta). English-only copy covering selected **real** personal projects, skills, about, and contact.
 
-Built with **Next.js** (App Router), **TypeScript**, and **Tailwind CSS**.
+Built with **Next.js** (App Router), **TypeScript**, and **Tailwind CSS**. Cosmic editorial theme (zinc / cyan).
+
+Live: [https://rizal-portfolio-three.vercel.app](https://rizal-portfolio-three.vercel.app)
 
 ## Pages
 
 | Route | Description |
 | --- | --- |
 | `/` | Home — intro, featured work, capabilities |
-| `/projects` | Work index — four case studies |
+| `/projects` | Work index — real case studies |
 | `/projects/[slug]` | Case study detail (problem → approach → tools → impact) |
 | `/skills` | Methods and tooling |
-| `/about` | Background and experience timeline |
+| `/about` | Background and timeline |
 | `/contact` | Email and outreach guidance |
 
-## Case studies
+## Case studies (REAL_PERSONAL)
 
-1. **E-commerce retention & win-back** — cohort retention and gated win-back test
-2. **Credit ops queue & SLA visibility** — overdue queue and collector SLAs
-3. **Marketplace promo depth experiment** — promo A/B with margin guardrails
-4. **Fulfillment late-delivery root cause** — stage-level latency attribution
+1. **AlphaRadar** — AI trading assistant (IDX / global / crypto), paper desk, daily briefs
+2. **Kuanta** — quant-finance webapp from math-zero for Indonesian learners
+3. **IDX agentic research** — agent-assisted filing → structured notes with human review
+4. **CSA lab (BMRI)** — bank fundamental templates from IR/OJK/IDX filings
+5. **Upwork Lane — AI agents & automation** — TypeScript agents under a &lt;10h/week cap
 
-Narratives are professional portfolio demos using generic domains (no claims of employment at famous brands).
+Honest process metrics only — no fictional employer ROI.
 
 ## Run locally
 
@@ -47,18 +50,9 @@ npm start
 - TypeScript
 - Tailwind CSS 4
 - Fonts: Geist (sans) + Source Serif 4 (display)
-
-## Project layout
-
-```
-src/
-  app/           # routes and layout
-  components/    # Header, Footer, ProjectCard, etc.
-  lib/           # projects, skills/site, about data
-```
+- Favicon / logo: `logo-ra.png`
 
 ## Notes
 
 - Site copy is English only.
-- No secrets are required to run the site.
-- Contact email / LinkedIn in `src/lib/skills.ts` can be updated to production values before deploy.
+- Contact: rizalalfiansyah1122@gmail.com · [LinkedIn](https://www.linkedin.com/in/rizal-alfiansyah)

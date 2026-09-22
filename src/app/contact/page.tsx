@@ -5,7 +5,7 @@ import { site } from "@/lib/skills";
 
 export const metadata: Metadata = {
   title: "Contact",
-  description: `Contact ${site.name} for analytics roles, contract work, or collaboration.`,
+  description: `Contact ${site.name} for product collaboration, automation engagements, or markets-related work.`,
 };
 
 export default function ContactPage() {
@@ -14,7 +14,7 @@ export default function ContactPage() {
       <SectionHeading
         eyebrow="Contact"
         title="Let’s talk"
-        description="Open to full-time analytics roles, contract engagements, and thoughtful collaborations. Prefer email for the first note—include a bit of context and I will reply within a few business days."
+        description="Open to thoughtfully scoped automation work, product collaboration, and conversations about markets tooling. Prefer email for the first note—include a bit of context and I will reply within a few business days."
       />
 
       <div className="mt-8">
@@ -63,8 +63,8 @@ export default function ContactPage() {
             <li>What problem you are trying to solve</li>
             <li>Timeline and rough scope</li>
             <li>
-              Whether you need analysis, dashboards, experiments, or hiring
-              support
+              Whether you need agents/automation, product collaboration, or
+              markets-related analysis
             </li>
             <li>Any constraints on stack or data access</li>
           </ul>

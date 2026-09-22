@@ -7,7 +7,7 @@ import { projects } from "@/lib/projects";
 export const metadata: Metadata = {
   title: "Work",
   description:
-    "Selected analytics case studies by Rizal Alfiansyah spanning retention, credit ops, pricing experiments, and fulfillment SLAs.",
+    "Selected real projects by Rizal Alfiansyah: AlphaRadar, Kuanta, IDX agentic research, CSA BMRI lab, and Upwork AI automation.",
 };
 
 export default function ProjectsPage() {
@@ -15,8 +15,8 @@ export default function ProjectsPage() {
     <Container className="py-14 sm:py-20">
       <SectionHeading
         eyebrow="Work"
-        title="Selected case studies"
-        description="Four projects that show how I frame problems, choose methods, and turn analysis into operational impact. Details are representative of work at this scope; company names are omitted."
+        title="Selected real projects"
+        description="Personal products, markets research, and constrained freelance delivery—honest process metrics, no fictional employer ROI."
       />
       <div className="mt-12 grid gap-6 sm:grid-cols-2">
         {projects.map((project) => (

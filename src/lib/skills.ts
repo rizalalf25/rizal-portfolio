@@ -1,47 +1,50 @@
 export const site = {
   name: "Rizal Alfiansyah",
   role: "Data Analyst",
-  years: "~4 years",
+  years: "Building AI/quant systems",
   location: "Jakarta, Indonesia",
-  tagline: "Turning messy operational data into decisions teams can trust.",
+  tagline:
+    "Data analyst building AI and quant systems for markets—decision tools, literacy products, and reliable automation.",
   summary:
-    "Data analyst with roughly four years of experience across retention, credit operations, pricing experiments, and fulfillment SLAs. I use SQL, Python, dbt, and BI tools to deliver clear before/after outcomes for product, growth, and ops partners.",
+    "Data analyst building AI/quant systems for markets: AlphaRadar for multi-market trading workflows, Kuanta for Indonesian quant learners, IDX agentic research and CSA lab work, plus a capped Upwork lane in TypeScript AI agents and automation.",
   email: "rizalalfiansyah1122@gmail.com",
   linkedin: "https://www.linkedin.com/in/rizal-alfiansyah",
 };
 
 export const skillGroups: { category: string; skills: string[] }[] = [
   {
-    category: "Analysis & experimentation",
+    category: "Analysis & markets",
     skills: [
       "SQL",
       "Python",
-      "A/B testing",
-      "Cohort analysis",
-      "Funnel analysis",
-      "Forecasting",
-      "Root-cause analysis",
+      "Financial statement analysis",
+      "Bank ratios (NII, NIM, NPL)",
+      "Journal / PnL tracking",
+      "Signal hygiene",
+      "Risk limits",
     ],
   },
   {
-    category: "Data platform & BI",
+    category: "Product & automation",
     skills: [
-      "dbt",
-      "ETL / data modeling",
-      "Looker",
-      "Tableau",
-      "Power BI",
-      "Excel / Sheets",
+      "TypeScript",
+      "Next.js",
+      "Telegram bots",
+      "n8n / AI agents",
+      "Data pipelines",
+      "APIs",
+      "Excel / Notion",
     ],
   },
   {
-    category: "Stakeholder work",
+    category: "Delivery & communication",
     skills: [
-      "Dashboarding",
-      "Metric definition",
+      "Curriculum / pedagogy design",
+      "Product scoping",
       "Stakeholder storytelling",
       "Requirements gathering",
       "Documentation",
+      "Hour-budget discipline",
     ],
   },
 ];

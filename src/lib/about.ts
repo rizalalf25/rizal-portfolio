@@ -1,13 +1,13 @@
 /**
- * Experience entries use generic roles/domains for portfolio framing.
- * They are not claims of employment at named real brands.
+ * Timeline reflects the real path: IR degree, self-taught markets literacy,
+ * product building, and constrained freelance delivery.
  */
 
-export const aboutIntro = `I turn messy operational data into decisions teams can act on. Over four years I have worked where product, ops, and finance meet—defining the right metric, testing what moves it, and telling the story so a non-analyst can decide in one meeting.
+export const aboutIntro = `I am a data analyst building AI and quant systems for markets—tools that turn noisy data into a clear next action. AlphaRadar is my multi-market trading assistant; Kuanta teaches quantitative finance from math-zero for Indonesian learners; IDX and CSA lab work sharpen fundamental research.
 
-I care less about pretty charts and more about a clear before/after: what changed, by how much, and what we do next.`;
+I care less about vanity dashboards and more about process: signal hygiene, structured research, and shipping under real constraints.`;
 
-export const aboutBackground = `Training in International Relations taught me to read incentives and communicate under ambiguity—skills I use every week with cross-functional partners. I am currently deepening capital-markets literacy alongside the craft of analytics.`;
+export const aboutBackground = `An S1 in International Relations trained me to read incentives and write clearly under ambiguity. I am self-teaching capital-markets literacy through the CSA path and OJK/WMI preparation, while shipping products and a tightly capped freelance automation lane on the way toward building an investment company.`;
 
 export type TimelineItem = {
   period: string;
@@ -18,24 +18,31 @@ export type TimelineItem = {
 
 export const experienceTimeline: TimelineItem[] = [
   {
-    period: "2023 — Present",
-    title: "Data Analyst",
-    org: "Product & growth analytics (marketplace / e-commerce)",
+    period: "2025 — Present",
+    title: "Data Analyst · Builder — AlphaRadar & Kuanta",
+    org: "Independent products",
     summary:
-      "Own retention and experimentation analytics: cohort models in dbt, Looker dashboards, and A/B readouts for CRM and category teams.",
+      "Shipping AlphaRadar (AI trading assistant, paper desk, daily briefs) and Kuanta (quant-finance curriculum webapp for Indonesian learners from math-zero).",
   },
   {
-    period: "2021 — 2023",
-    title: "Operations Analyst",
-    org: "Fintech & lending operations",
+    period: "2025 — Present",
+    title: "Freelance — AI agents & automation",
+    org: "Upwork (hard cap <10h/week)",
     summary:
-      "Built overdue-queue visibility, SLA tracking, and weekly ops rituals that cut manual reconciles and days-past-due.",
+      "TypeScript agents, n8n workflows, and API automation for clients—scoped delivery and reliability while protecting time for product and markets work.",
   },
   {
-    period: "2020 — 2021",
-    title: "Junior Analyst",
-    org: "Fulfillment & logistics analytics",
+    period: "2024 — Present",
+    title: "Self-taught CSA & IDX research",
+    org: "CSA Block 2 · OJK / WMI path · IDX lab",
     summary:
-      "Modeled stage-level delivery timelines, Power BI hub boards, and root-cause packs for warehouse and carrier reviews.",
+      "Agentic IDX research workflows and fundamental analysis lab work (e.g. BMRI from IR/OJK/IDX filings into Notion/Excel snapshots) toward capital-markets credentials.",
+  },
+  {
+    period: "Completed",
+    title: "S1 Hubungan Internasional",
+    org: "Undergraduate degree",
+    summary:
+      "International Relations foundation—research, writing, and reading institutional incentives—applied now to markets, products, and client communication.",
   },
 ];

@@ -15,7 +15,7 @@ export default function SkillsPage() {
       <SectionHeading
         eyebrow="Skills"
         title="Methods and tooling"
-        description="A practical stack for analytics work: strong SQL and Python, modern BI and transformation tools, and the soft skills that make analysis stick with stakeholders."
+        description="A practical stack for shipping decision systems and market-literacy products: TypeScript and Python, Next.js, bots and agents, statement analysis, and delivery discipline."
       />
       <div className="mt-12 space-y-10">
         {skillGroups.map((group) => (

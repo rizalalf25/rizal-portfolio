@@ -11,7 +11,7 @@ import { site } from "@/lib/skills";
 
 export const metadata: Metadata = {
   title: "About",
-  description: `About ${site.name}, a data analyst based in ${site.location}.`,
+  description: `About ${site.name}, a builder and analyst based in ${site.location}.`,
 };
 
 export default function AboutPage() {
@@ -22,7 +22,7 @@ export default function AboutPage() {
       <SectionHeading
         eyebrow="About"
         title={site.name}
-        description={`${site.role} based in ${site.location}, with ${site.years} of experience helping teams make better decisions with data.`}
+        description={`${site.role} based in ${site.location}—building AI and quant systems for markets, literacy products, and tightly scoped automation.`}
       />
 
       <div className="mt-12 grid gap-12 lg:grid-cols-[1fr_300px]">
