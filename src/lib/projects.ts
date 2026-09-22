@@ -43,7 +43,7 @@ export const projects: Project[] = [
       "I designed AlphaRadar as a multi-market assistant with a paper-trading desk at the center. TypeScript and Python pipelines normalize market inputs; Hermes shapes daily briefs; Telegram bots deliver them where I already check messages. The product emphasis is journal and PnL tracking, explicit risk limits, and repeatable brief cadence—so analytics serve decision hygiene rather than hindsight storytelling.",
     impact: [
       { label: "Markets in one workflow", value: "IDX · Global · Crypto" },
-      { label: "Daily brief delivery", value: "Hermes + Telegram" },
+      { label: "Daily briefs", value: "Delivered daily" },
       { label: "Trading mode", value: "Paper desk first" },
     ],
   },
