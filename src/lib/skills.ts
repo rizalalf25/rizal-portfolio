@@ -6,8 +6,8 @@ export const site = {
   tagline: "Turning messy operational data into decisions teams can trust.",
   summary:
     "Data analyst with roughly four years of experience across retention, credit operations, pricing experiments, and fulfillment SLAs. I use SQL, Python, dbt, and BI tools to deliver clear before/after outcomes for product, growth, and ops partners.",
-  email: "hello@rizalalfiansyah.com",
-  linkedin: "https://www.linkedin.com/in/rizalalfiansyah",
+  email: "rizalalfiansyah1122@gmail.com",
+  linkedin: "https://www.linkedin.com/in/rizal-alfiansyah",
 };
 
 export const skillGroups: { category: string; skills: string[] }[] = [
