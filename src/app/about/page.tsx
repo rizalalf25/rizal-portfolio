@@ -26,29 +26,29 @@ export default function AboutPage() {
       />
 
       <div className="mt-12 grid gap-12 lg:grid-cols-[1fr_300px]">
-        <div className="space-y-6 text-base leading-relaxed text-stone-600">
+        <div className="space-y-6 text-base leading-relaxed text-zinc-400">
           {introParagraphs.map((p) => (
             <p key={p.slice(0, 24)}>{p}</p>
           ))}
           <p>{aboutBackground}</p>
 
-          <h2 className="pt-4 font-serif text-2xl font-bold text-stone-900">
+          <h2 className="pt-4 font-serif text-2xl font-bold text-zinc-50">
             Experience
           </h2>
           <ol className="space-y-6">
             {experienceTimeline.map((item) => (
               <li
                 key={item.period}
-                className="border-l-2 border-emerald-800/30 pl-5"
+                className="border-l-2 border-cyan-400/30 pl-5"
               >
-                <p className="text-xs font-medium uppercase tracking-wider text-emerald-800">
+                <p className="text-xs font-medium uppercase tracking-wider text-cyan-400">
                   {item.period}
                 </p>
-                <p className="mt-1 font-serif text-lg font-semibold text-stone-900">
+                <p className="mt-1 font-serif text-lg font-semibold text-zinc-50">
                   {item.title}
                 </p>
-                <p className="text-sm text-stone-500">{item.org}</p>
-                <p className="mt-2 text-sm leading-relaxed text-stone-600">
+                <p className="text-sm text-zinc-400">{item.org}</p>
+                <p className="mt-2 text-sm leading-relaxed text-zinc-400">
                   {item.summary}
                 </p>
               </li>
@@ -56,36 +56,36 @@ export default function AboutPage() {
           </ol>
         </div>
 
-        <aside className="h-fit space-y-6 rounded-xl border border-stone-200 bg-white p-6">
+        <aside className="h-fit space-y-6 rounded-xl border border-zinc-800 bg-zinc-900 p-6">
           <div>
-            <h2 className="text-xs font-medium uppercase tracking-[0.14em] text-stone-500">
+            <h2 className="text-xs font-medium uppercase tracking-[0.14em] text-zinc-400">
               Snapshot
             </h2>
             <dl className="mt-4 space-y-3 text-sm">
               <div className="flex justify-between gap-4">
-                <dt className="text-stone-500">Role</dt>
-                <dd className="text-right font-medium text-stone-900">
+                <dt className="text-zinc-400">Role</dt>
+                <dd className="text-right font-medium text-zinc-50">
                   {site.role}
                 </dd>
               </div>
               <div className="flex justify-between gap-4">
-                <dt className="text-stone-500">Experience</dt>
-                <dd className="text-right font-medium text-stone-900">
+                <dt className="text-zinc-400">Experience</dt>
+                <dd className="text-right font-medium text-zinc-50">
                   {site.years}
                 </dd>
               </div>
               <div className="flex justify-between gap-4">
-                <dt className="text-stone-500">Location</dt>
-                <dd className="text-right font-medium text-stone-900">
+                <dt className="text-zinc-400">Location</dt>
+                <dd className="text-right font-medium text-zinc-50">
                   {site.location}
                 </dd>
               </div>
             </dl>
           </div>
-          <div className="border-t border-stone-100 pt-6">
+          <div className="border-t border-zinc-800 pt-6">
             <Link
               href="/contact"
-              className="inline-flex h-10 items-center rounded-full bg-emerald-700 px-4 text-sm font-medium text-white hover:bg-emerald-800 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-700"
+              className="inline-flex h-10 items-center rounded-full bg-cyan-400 px-4 text-sm font-medium text-zinc-950 hover:bg-cyan-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-400"
             >
               Start a conversation
             </Link>

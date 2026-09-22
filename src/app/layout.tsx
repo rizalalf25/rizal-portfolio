@@ -28,6 +28,10 @@ export const metadata: Metadata = {
   },
   description: site.summary,
   metadataBase: new URL("https://rizalalfiansyah.com"),
+  icons: {
+    icon: "/logo-ra.png",
+    apple: "/logo-ra.png",
+  },
   openGraph: {
     title: `${site.name} — ${site.role}`,
     description: site.tagline,
@@ -47,10 +51,10 @@ export default function RootLayout({
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} ${sourceSerif.variable} h-full antialiased`}
     >
-      <body className="flex min-h-full flex-col bg-stone-50 text-stone-900">
+      <body className="flex min-h-full flex-col bg-zinc-950 text-zinc-50">
         <a
           href="#main"
-          className="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-50 focus:rounded-md focus:bg-white focus:px-3 focus:py-2 focus:text-sm focus:font-medium focus:text-emerald-700 focus:shadow"
+          className="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-50 focus:rounded-md focus:bg-zinc-900 focus:px-3 focus:py-2 focus:text-sm focus:font-medium focus:text-cyan-400 focus:shadow"
         >
           Skip to main content
         </a>

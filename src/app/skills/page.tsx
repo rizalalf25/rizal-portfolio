@@ -20,14 +20,14 @@ export default function SkillsPage() {
       <div className="mt-12 space-y-10">
         {skillGroups.map((group) => (
           <section key={group.category}>
-            <h2 className="font-serif text-xl font-bold text-stone-900">
+            <h2 className="font-serif text-xl font-bold text-zinc-50">
               {group.category}
             </h2>
             <ul className="mt-4 flex flex-wrap gap-2">
               {group.skills.map((skill) => (
                 <li
                   key={skill}
-                  className="rounded-full border border-stone-200 bg-white px-4 py-2 text-sm text-stone-700"
+                  className="rounded-full border border-zinc-800 bg-zinc-900 px-4 py-2 text-sm text-zinc-300"
                 >
                   {skill}
                 </li>

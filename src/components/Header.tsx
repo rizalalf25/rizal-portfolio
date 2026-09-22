@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
@@ -16,10 +17,10 @@ function linkClass(pathname: string, href: string) {
   const active =
     pathname === href || (href !== "/" && pathname.startsWith(href));
   return [
-    "text-sm font-medium transition-colors rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-700",
+    "text-sm font-medium transition-colors rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-400",
     active
-      ? "text-emerald-700 underline decoration-2 underline-offset-8"
-      : "text-stone-900 hover:text-emerald-700",
+      ? "text-cyan-400 underline decoration-2 underline-offset-8"
+      : "text-zinc-50 hover:text-cyan-400",
   ].join(" ");
 }
 
@@ -39,13 +40,23 @@ export function Header() {
   }, [open]);
 
   return (
-    <header className="sticky top-0 z-40 border-b border-stone-200 bg-stone-50">
+    <header className="sticky top-0 z-40 border-b border-zinc-800 bg-zinc-950">
       <Container className="flex h-14 items-center justify-between gap-4">
         <Link
           href="/"
-          className="font-serif text-lg font-bold text-stone-900 rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-700"
+          className="flex items-center gap-2.5 rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-400"
         >
-          Rizal Alfiansyah
+          <Image
+            src="/logo-ra.png"
+            alt="Rizal Alfiansyah"
+            width={36}
+            height={36}
+            className="h-9 w-9 object-contain"
+            priority
+          />
+          <span className="font-serif text-lg font-bold text-zinc-50">
+            Rizal Alfiansyah
+          </span>
         </Link>
 
         <nav aria-label="Primary" className="hidden md:block">
@@ -62,7 +73,7 @@ export function Header() {
 
         <button
           type="button"
-          className="inline-flex h-10 w-10 items-center justify-center rounded-md border border-stone-200 text-stone-900 md:hidden focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-700"
+          className="inline-flex h-10 w-10 items-center justify-center rounded-md border border-zinc-800 text-zinc-50 md:hidden focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-400"
           aria-expanded={open}
           aria-controls="mobile-nav"
           onClick={() => setOpen((v) => !v)}
@@ -89,7 +100,7 @@ export function Header() {
       {open ? (
         <div
           id="mobile-nav"
-          className="border-t border-stone-200 bg-stone-50 md:hidden"
+          className="border-t border-zinc-800 bg-zinc-950 md:hidden"
         >
           <Container>
             <nav aria-label="Mobile primary" className="py-4">

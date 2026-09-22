@@ -20,46 +20,46 @@ export default function ContactPage() {
       <div className="mt-8">
         <a
           href={`mailto:${site.email}?subject=Hello%20from%20your%20portfolio`}
-          className="inline-flex h-11 items-center rounded-full bg-emerald-700 px-5 text-sm font-medium text-white transition hover:bg-emerald-800 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-700"
+          className="inline-flex h-11 items-center rounded-full bg-cyan-400 px-5 text-sm font-medium text-zinc-950 transition hover:bg-cyan-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-400"
         >
           Email me
         </a>
       </div>
 
       <div className="mt-12 grid gap-8 lg:grid-cols-2">
-        <div className="rounded-xl border border-stone-200 bg-white p-8">
-          <h2 className="font-serif text-xl font-bold text-stone-900">Email</h2>
-          <p className="mt-2 text-sm text-stone-500">
+        <div className="rounded-xl border border-zinc-800 bg-zinc-900 p-8">
+          <h2 className="font-serif text-xl font-bold text-zinc-50">Email</h2>
+          <p className="mt-2 text-sm text-zinc-400">
             Best for project briefs and role discussions.
           </p>
           <a
             href={`mailto:${site.email}?subject=Hello%20from%20your%20portfolio`}
-            className="mt-6 inline-flex text-lg font-medium text-emerald-700 hover:underline"
+            className="mt-6 inline-flex text-lg font-medium text-cyan-400 hover:underline"
           >
             {site.email}
           </a>
-          <div className="mt-8 border-t border-stone-100 pt-6">
-            <h3 className="text-sm font-medium text-stone-900">LinkedIn</h3>
+          <div className="mt-8 border-t border-zinc-800 pt-6">
+            <h3 className="text-sm font-medium text-zinc-50">LinkedIn</h3>
             <a
               href={site.linkedin}
               target="_blank"
               rel="noopener noreferrer"
-              className="mt-2 inline-flex text-sm text-emerald-700 hover:underline"
+              className="mt-2 inline-flex text-sm text-cyan-400 hover:underline"
             >
               linkedin.com/in/rizal-alfiansyah
             </a>
           </div>
-          <p className="mt-8 text-sm leading-relaxed text-stone-500">
+          <p className="mt-8 text-sm leading-relaxed text-zinc-400">
             Based in {site.location}. Available for remote collaboration with a
             preference for Asia / Europe overlap.
           </p>
         </div>
 
-        <div className="rounded-xl border border-stone-200 bg-stone-50 p-8">
-          <h2 className="font-serif text-xl font-bold text-stone-900">
+        <div className="rounded-xl border border-zinc-800 bg-zinc-950 p-8">
+          <h2 className="font-serif text-xl font-bold text-zinc-50">
             What to include
           </h2>
-          <ul className="mt-4 list-disc space-y-2 pl-5 text-sm leading-relaxed text-stone-600">
+          <ul className="mt-4 list-disc space-y-2 pl-5 text-sm leading-relaxed text-zinc-400">
             <li>What problem you are trying to solve</li>
             <li>Timeline and rough scope</li>
             <li>
