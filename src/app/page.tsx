@@ -11,7 +11,7 @@ export default function HomePage() {
   return (
     <>
       <section className="border-b border-stone-200">
-        <Container className="py-16 sm:py-24">
+        <Container className="py-10 sm:py-14">
           <p className="text-xs font-medium uppercase tracking-[0.14em] text-emerald-800">
             {site.role} · {site.location}
           </p>
@@ -27,13 +27,13 @@ export default function HomePage() {
           <div className="mt-8 flex flex-wrap gap-3">
             <Link
               href="/projects"
-              className="inline-flex h-11 items-center rounded-full bg-stone-900 px-5 text-sm font-medium text-white transition hover:bg-stone-800"
+              className="inline-flex h-11 items-center rounded-full bg-emerald-700 px-5 text-sm font-medium text-white transition hover:bg-emerald-800 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-700"
             >
               View selected work
             </Link>
             <Link
               href="/contact"
-              className="inline-flex h-11 items-center rounded-full border border-stone-300 bg-white px-5 text-sm font-medium text-stone-800 transition hover:border-stone-400"
+              className="inline-flex h-11 items-center rounded-full bg-emerald-700 px-5 text-sm font-medium text-white transition hover:bg-emerald-800 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-700"
             >
               Get in touch
             </Link>
@@ -42,7 +42,7 @@ export default function HomePage() {
       </section>
 
       <section>
-        <Container className="py-16 sm:py-20">
+        <Container className="py-12 sm:py-16">
           <div className="flex items-end justify-between gap-4">
             <div>
               <p className="text-xs font-medium uppercase tracking-[0.14em] text-emerald-800">

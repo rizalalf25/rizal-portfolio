@@ -85,7 +85,7 @@ export default function AboutPage() {
           <div className="border-t border-stone-100 pt-6">
             <Link
               href="/contact"
-              className="inline-flex h-10 items-center rounded-full bg-stone-900 px-4 text-sm font-medium text-white hover:bg-stone-800"
+              className="inline-flex h-10 items-center rounded-full bg-emerald-700 px-4 text-sm font-medium text-white hover:bg-emerald-800 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-700"
             >
               Start a conversation
             </Link>

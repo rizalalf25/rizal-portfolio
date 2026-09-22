@@ -60,7 +60,7 @@ export default async function ProjectDetailPage({ params }: PageProps) {
                 <dt className="text-xs uppercase tracking-wider text-stone-500">
                   {item.label}
                 </dt>
-                <dd className="mt-1 font-serif text-3xl font-bold text-emerald-800">
+                <dd className="mt-1 font-serif text-3xl font-bold text-emerald-700">
                   {item.value}
                 </dd>
               </div>
@@ -92,19 +92,18 @@ export default async function ProjectDetailPage({ params }: PageProps) {
               <h2 className="font-serif text-2xl font-bold text-stone-900">
                 Impact
               </h2>
-              <ul className="mt-4 space-y-3">
+              <dl className="mt-6 grid grid-cols-2 gap-6 sm:grid-cols-3">
                 {project.impact.map((item) => (
-                  <li
-                    key={item.label}
-                    className="flex items-baseline justify-between gap-4 border-b border-stone-200 pb-3 text-stone-700"
-                  >
-                    <span>{item.label}</span>
-                    <span className="font-serif text-xl font-semibold text-emerald-800">
+                  <div key={item.label}>
+                    <dt className="text-xs uppercase tracking-wider text-stone-500">
+                      {item.label}
+                    </dt>
+                    <dd className="mt-1 font-serif text-3xl font-bold text-emerald-700 sm:text-4xl">
                       {item.value}
-                    </span>
-                  </li>
+                    </dd>
+                  </div>
                 ))}
-              </ul>
+              </dl>
             </section>
           </div>
 
