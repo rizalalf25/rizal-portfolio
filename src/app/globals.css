@@ -249,6 +249,76 @@ html[data-reveal="on"] [data-reveal].is-in {
   color: var(--ink-950);
 }
 
+/* ------------------------------------------------------------------
+   3D portrait — pointer tilt + layered depth (see Portrait3D.tsx)
+------------------------------------------------------------------- */
+.portrait-stage {
+  --rx: 0deg;
+  --ry: 0deg;
+  --gx: 50%;
+  --gy: 30%;
+  perspective: 1100px;
+}
+
+.portrait-float,
+.portrait-card {
+  transform-style: preserve-3d;
+}
+
+.portrait-float {
+  animation: portrait-float 7s ease-in-out infinite;
+}
+
+.portrait-card {
+  transform: rotateX(var(--rx)) rotateY(var(--ry));
+  transition: transform 0.6s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.portrait-stage[data-active="on"] .portrait-card {
+  transition-duration: 0.12s;
+}
+
+.portrait-layer {
+  transform: translateZ(var(--z, 0px));
+}
+
+.portrait-grid {
+  background-image:
+    linear-gradient(to right, var(--line) 1px, transparent 1px),
+    linear-gradient(to bottom, var(--line) 1px, transparent 1px);
+  background-size: 28px 28px;
+  mask-image: radial-gradient(ellipse at 50% 40%, #000 20%, transparent 75%);
+  -webkit-mask-image: radial-gradient(ellipse at 50% 40%, #000 20%, transparent 75%);
+}
+
+.portrait-ring {
+  border: 1px solid rgba(52, 216, 238, 0.35);
+  box-shadow:
+    0 0 60px -10px rgba(52, 216, 238, 0.45),
+    inset 0 0 40px -10px rgba(52, 216, 238, 0.3);
+}
+
+.portrait-glare {
+  background: radial-gradient(circle at var(--gx) var(--gy), rgba(255, 255, 255, 0.22), transparent 55%);
+  mix-blend-mode: soft-light;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.portrait-stage[data-active="on"] .portrait-glare {
+  opacity: 1;
+}
+
+@keyframes portrait-float {
+  0%,
+  100% {
+    transform: translateY(0) rotateX(2deg) rotateY(-4deg);
+  }
+  50% {
+    transform: translateY(-10px) rotateX(-2deg) rotateY(4deg);
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
@@ -257,7 +327,8 @@ html[data-reveal="on"] [data-reveal].is-in {
   .draw,
   .live-dot,
   .caret,
-  .rise {
+  .rise,
+  .portrait-float {
     animation: none !important;
   }
   .draw {
