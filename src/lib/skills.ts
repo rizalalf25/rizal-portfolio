@@ -9,7 +9,26 @@ export const site = {
     "Data analyst building AI/quant systems for markets: AlphaRadar for multi-market trading workflows, Kuanta for Indonesian quant learners, IDX agentic research and CSA lab work, plus a capped Upwork lane in TypeScript AI agents and automation.",
   email: "rizalalfiansyah1122@gmail.com",
   linkedin: "https://www.linkedin.com/in/rizal-alfiansyah",
+  github: "https://github.com/rizalalf25",
 };
+
+/** Words that scroll across the home-page ticker. */
+export const tickerItems = [
+  "IDX",
+  "Global equities",
+  "Crypto",
+  "TypeScript",
+  "Python",
+  "SQL",
+  "Next.js",
+  "AI agents",
+  "n8n",
+  "Telegram bots",
+  "Financial statements",
+  "NII · NIM · NPL",
+  "Paper trading",
+  "CSA path",
+];
 
 export const skillGroups: { category: string; skills: string[] }[] = [
   {
