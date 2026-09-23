@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { Container } from "@/components/Container";
 import { CtaBand } from "@/components/CtaBand";
-import { HeroPanel } from "@/components/HeroPanel";
+import { Portrait3D } from "@/components/Portrait3D";
 import { Marquee } from "@/components/Marquee";
 import { ProjectCard } from "@/components/ProjectCard";
 import { SectionHeading } from "@/components/SectionHeading";
@@ -79,7 +79,7 @@ export default function HomePage() {
 
           <div className="rise relative" style={{ ["--delay" as string]: "200ms" }}>
             <div aria-hidden className="absolute -inset-4 -z-10 sm:-inset-8 rounded-[40px] bg-signal/10 blur-3xl" />
-            <HeroPanel />
+            <Portrait3D />
           </div>
         </Container>
 
