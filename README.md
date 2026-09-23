@@ -2,7 +2,7 @@
 
 Personal portfolio for **Rizal Alfiansyah**, a data analyst building AI/quant systems for markets (Jakarta). English-only copy covering selected **real** personal projects, skills, about, and contact.
 
-Built with **Next.js** (App Router), **TypeScript**, and **Tailwind CSS**. Cosmic editorial theme (zinc / cyan).
+Built with **Next.js** (App Router), **TypeScript**, and **Tailwind CSS**. Design: *market terminal × editorial* — near-black ink, hairline grid, one cyan signal color taken from the RA mark, Instrument Serif display type over Geist / Geist Mono.
 
 Live: [https://rizal-portfolio-three.vercel.app](https://rizal-portfolio-three.vercel.app)
 
@@ -49,8 +49,24 @@ npm start
 - React 19
 - TypeScript
 - Tailwind CSS 4
-- Fonts: Geist (sans) + Source Serif 4 (display)
-- Favicon / logo: `logo-ra.png`
+- Fonts: Instrument Serif (display) + Geist (sans) + Geist Mono (data / labels)
+- Favicon / logo: square crop of `logo-ra.png` → `public/logo-mark.png`, `src/app/icon.png`
+- No animation library: CSS keyframes + a tiny IntersectionObserver (`RevealObserver`) for scroll reveals; all motion respects `prefers-reduced-motion`
+- Dynamic Open Graph image at `src/app/opengraph-image.tsx`
+
+## Design system
+
+Tokens live in `src/app/globals.css` (`--ink-*`, `--line`, `--fg`, `--signal`, `--up`, `--down`) and are exposed to Tailwind as `bg-ink-950`, `text-signal`, `border-line`, etc. Reusable pieces:
+
+| Component | Use |
+| --- | --- |
+| `SectionHeading` | Numbered eyebrow + display title (accepts JSX for italic accents) |
+| `ProjectCard` / `ProjectGlyph` | Case-study cards with a decorative line drawing per project |
+| `ProjectsGrid` | Client-side filter chips on `/projects` |
+| `HeroPanel`, `Marquee`, `CtaBand` | Home hero terminal, ticker strip, closing call-to-action |
+| `LocalTime`, `CopyEmail` | Live Jakarta clock, copy-to-clipboard email |
+
+Content still comes from `src/lib/*.ts` — edit copy there, not in the pages.
 
 ## Notes
 

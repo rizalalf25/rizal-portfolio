@@ -46,3 +46,24 @@ export const experienceTimeline: TimelineItem[] = [
       "International Relations foundation—research, writing, and reading institutional incentives—applied now to markets, products, and client communication.",
   },
 ];
+
+export type Principle = {
+  title: string;
+  body: string;
+};
+
+/** Working principles, distilled from how the projects are actually run. */
+export const principles: Principle[] = [
+  {
+    title: "Signal over noise",
+    body: "Normalize the inputs, journal every decision, and review signals on a schedule. Analytics should change the next action, not decorate hindsight.",
+  },
+  {
+    title: "Agents draft, I decide",
+    body: "Automation speeds up extraction and delivery, with provenance to primary sources and a human review gate before any judgment call.",
+  },
+  {
+    title: "Ship under constraints",
+    body: "Small, reliable systems that run unattended beat ambitious ones that need babysitting. Scope is written down; hour budgets are real.",
+  },
+];

@@ -1,12 +1,10 @@
 import type { Metadata } from "next";
-import Link from "next/link";
+import Image from "next/image";
 import { Container } from "@/components/Container";
+import { CtaBand } from "@/components/CtaBand";
+import { LocalTime } from "@/components/LocalTime";
 import { SectionHeading } from "@/components/SectionHeading";
-import {
-  aboutBackground,
-  aboutIntro,
-  experienceTimeline,
-} from "@/lib/about";
+import { aboutBackground, aboutIntro, experienceTimeline, principles } from "@/lib/about";
 import { site } from "@/lib/skills";
 
 export const metadata: Metadata = {
@@ -18,80 +16,105 @@ export default function AboutPage() {
   const introParagraphs = aboutIntro.split("\n\n");
 
   return (
-    <Container className="py-14 sm:py-20">
-      <SectionHeading
-        eyebrow="About"
-        title={site.name}
-        description={`${site.role} based in ${site.location}—building AI and quant systems for markets, literacy products, and tightly scoped automation.`}
-      />
+    <>
+      <Container className="pt-14 sm:pt-20">
+        <div className="grid gap-14 lg:grid-cols-[1.3fr_0.7fr] lg:items-end">
+          <div className="rise">
+            <SectionHeading
+              eyebrow="About"
+              index="03"
+              title={
+                <>
+                  Less vanity dashboards. <span className="italic text-gradient">More process.</span>
+                </>
+              }
+            />
+          </div>
 
-      <div className="mt-12 grid gap-12 lg:grid-cols-[1fr_300px]">
-        <div className="space-y-6 text-base leading-relaxed text-zinc-400">
-          {introParagraphs.map((p) => (
-            <p key={p.slice(0, 24)}>{p}</p>
-          ))}
-          <p>{aboutBackground}</p>
+          <aside
+            className="rise card overflow-hidden"
+            style={{ ["--delay" as string]: "120ms" }}
+          >
+            <div className="flex items-center gap-4 border-b border-line p-5">
+              <span className="block h-14 w-14 overflow-hidden rounded-2xl border border-line-strong bg-[#131313]">
+                <Image src="/logo-mark.png" alt="" width={56} height={56} className="h-full w-full scale-[1.18] object-cover" />
+              </span>
+              <div>
+                <p className="text-[16px] font-medium text-fg">{site.name}</p>
+                <p className="font-mono text-[11px] uppercase tracking-[0.14em] text-dim">{site.role}</p>
+              </div>
+            </div>
+            <dl className="divide-y divide-line text-[14px]">
+              {[
+                ["Focus", site.years],
+                ["Based in", site.location],
+                ["Local time", <LocalTime key="t" />],
+                ["Study path", "CSA · OJK / WMI"],
+              ].map(([k, v]) => (
+                <div key={String(k)} className="flex justify-between gap-4 px-5 py-3">
+                  <dt className="text-dim">{k}</dt>
+                  <dd className="text-right text-fg">{v}</dd>
+                </div>
+              ))}
+            </dl>
+          </aside>
+        </div>
 
-          <h2 className="pt-4 font-serif text-2xl font-bold text-zinc-50">
-            Experience
-          </h2>
-          <ol className="space-y-6">
+        <div className="mt-24 grid gap-14 lg:grid-cols-[260px_1fr] lg:gap-20">
+          <p className="eyebrow lg:pt-3" data-reveal>
+            <span className="text-signal">A</span> — Who I am
+          </p>
+          <div className="max-w-[64ch] space-y-7" data-reveal>
+            <p className="font-display text-[clamp(1.7rem,3.2vw,2.3rem)] leading-[1.25] text-fg">
+              {introParagraphs[0]}
+            </p>
+            {introParagraphs.slice(1).map((p) => (
+              <p key={p.slice(0, 24)} className="text-[17px] leading-[1.8] text-muted">
+                {p}
+              </p>
+            ))}
+            <p className="text-[17px] leading-[1.8] text-muted">{aboutBackground}</p>
+          </div>
+        </div>
+
+        <div className="mt-24 grid gap-14 lg:grid-cols-[260px_1fr] lg:gap-20">
+          <p className="eyebrow lg:pt-3" data-reveal>
+            <span className="text-signal">B</span> — Path so far
+          </p>
+          <ol className="border-t border-line">
             {experienceTimeline.map((item) => (
               <li
-                key={item.period}
-                className="border-l-2 border-cyan-400/30 pl-5"
+                key={item.title}
+                data-reveal
+                className="group grid gap-3 border-b border-line py-8 md:grid-cols-[170px_1fr] md:gap-8"
               >
-                <p className="text-xs font-medium uppercase tracking-wider text-cyan-400">
-                  {item.period}
-                </p>
-                <p className="mt-1 font-serif text-lg font-semibold text-zinc-50">
-                  {item.title}
-                </p>
-                <p className="text-sm text-zinc-400">{item.org}</p>
-                <p className="mt-2 text-sm leading-relaxed text-zinc-400">
-                  {item.summary}
-                </p>
+                <p className="font-mono text-[12px] uppercase tracking-[0.12em] text-signal md:pt-1.5">{item.period}</p>
+                <div>
+                  <h2 className="font-display text-[1.85rem] leading-[1.1] text-fg">{item.title}</h2>
+                  <p className="mt-1 font-mono text-[12px] text-dim">{item.org}</p>
+                  <p className="mt-4 max-w-[60ch] text-[16px] leading-relaxed text-muted">{item.summary}</p>
+                </div>
               </li>
             ))}
           </ol>
         </div>
 
-        <aside className="h-fit space-y-6 rounded-xl border border-zinc-800 bg-zinc-900 p-6">
-          <div>
-            <h2 className="text-xs font-medium uppercase tracking-[0.14em] text-zinc-400">
-              Snapshot
-            </h2>
-            <dl className="mt-4 space-y-3 text-sm">
-              <div className="flex justify-between gap-4">
-                <dt className="text-zinc-400">Role</dt>
-                <dd className="text-right font-medium text-zinc-50">
-                  {site.role}
-                </dd>
-              </div>
-              <div className="flex justify-between gap-4">
-                <dt className="text-zinc-400">Experience</dt>
-                <dd className="text-right font-medium text-zinc-50">
-                  {site.years}
-                </dd>
-              </div>
-              <div className="flex justify-between gap-4">
-                <dt className="text-zinc-400">Location</dt>
-                <dd className="text-right font-medium text-zinc-50">
-                  {site.location}
-                </dd>
-              </div>
-            </dl>
-          </div>
-          <div className="border-t border-zinc-800 pt-6">
-            <Link
-              href="/contact"
-              className="inline-flex h-10 items-center rounded-full bg-cyan-400 px-4 text-sm font-medium text-zinc-950 hover:bg-cyan-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-400"
-            >
-              Start a conversation
-            </Link>
-          </div>
-        </aside>
-      </div>
-    </Container>
+        <div className="mt-24 grid gap-14 lg:grid-cols-[260px_1fr] lg:gap-20">
+          <p className="eyebrow lg:pt-3" data-reveal>
+            <span className="text-signal">C</span> — Principles
+          </p>
+          <ul className="grid gap-5 md:grid-cols-3">
+            {principles.map((p, i) => (
+              <li key={p.title} data-reveal style={{ ["--delay" as string]: `${i * 90}ms` }} className="card p-6">
+                <span className="font-mono text-[11px] text-signal">0{i + 1}</span>
+                <h3 className="font-display mt-6 text-[1.6rem] leading-[1.1] text-fg">{p.title}</h3>
+                <p className="mt-3 text-[14.5px] leading-relaxed text-muted">{p.body}</p>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </Container>
+      <CtaBand />
+    </>
   );
 }
